@@ -1,5 +1,5 @@
-let columnCount = 3;
-let elementGap = 20;
+let columnCount = 2;
+let elementGap = 40;
 let elem = document.querySelector(".root");
 let dot_elem = document.querySelectorAll(".root .el");
 let a = (window.innerWidth - (columnCount - 1)*elementGap )* 100 / (window.innerWidth*columnCount);
