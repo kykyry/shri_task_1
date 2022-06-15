@@ -12,7 +12,7 @@ for (let i = 0; i < columnCount; i++) {
     qwer.id = "a" + i;
     // qwer.style.cssText=`float: left; width: ${a}%`;
 
-    qwer.style.cssText=`width: ${a}%`;
+    qwer.style.cssText=`float: left; width: ${a}%`;
     // qwer.style.cssText=`display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
     elem.prepend(qwer);
     arr_col.push(qwer);
