@@ -10,7 +10,7 @@ let min_index = 0;
 
 for(let i = 0; i< columnCount; i++){
     let qwer = document.createElement('div');
-    qwer.id = i;
+    qwer.id = "a"+i;
     qwer.style.cssText=`float: left; width: ${a}%`;
     elem.prepend(qwer);
     arr_col.push(qwer);
@@ -25,7 +25,7 @@ for (let j = 0; j<dot_elem.length; j++){
             min_index = i;
         }
     }
-    document.querySelector(`#${min_index}`).appendChild(dot_elem[j]);
+    document.querySelector(`#a${min_index}`).appendChild(dot_elem[j]);
 }
 
 document.querySelectorAll(".el").forEach(el => el.style.cssText=`margin-bottom: ${elementGap}px;`)
