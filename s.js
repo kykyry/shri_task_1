@@ -2,7 +2,7 @@ let columnCount = 3;
 let elementGap = 20;
 let elem = document.querySelector(".root");
 let dot_elem = document.querySelectorAll(".root .el");
-let a = (window.innerWidth - (columnCount - 1)*elementGap) / (window.innerWidth*columnCount);
+let a = (window.innerWidth - (columnCount - 1)*elementGap * 100) / (window.innerWidth*columnCount);
 let arr_col = []; //document.documentElement.clientWidth
 let min_index = 0;
 
@@ -11,7 +11,7 @@ for (let i = 0; i < columnCount; i++) {
     let qwer = document.createElement('div');
     qwer.id = "a" + i;
     // qwer.style.cssText=`float: left; width: ${a}%`;
-    qwer.style.cssText=`display: flex; justify-content: space-between; width: ${a}%`;
+    qwer.style.cssText=`display: flex; flex-direction: column; justify-content: space-between; width: ${a}%`;
     // qwer.style.cssText=`display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
     elem.prepend(qwer);
     arr_col.push(qwer);
