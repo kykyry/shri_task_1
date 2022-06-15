@@ -10,8 +10,8 @@ let min_index = 0;
 for (let i = 0; i < columnCount; i++) {
     let qwer = document.createElement('div');
     qwer.id = "a" + i;
-    // qwer.style.cssText=`float: left; width: ${a}%`;
-    qwer.style.cssText=`display: flex; justify-content: space-between; width: ${a}%`;
+    qwer.style.cssText=`float: left; width: ${a}%`;
+    // qwer.style.cssText=`display: flex; justify-content: space-between; width: ${a}%`;
     // qwer.style.cssText=`display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
     elem.prepend(qwer);
     arr_col.push(qwer);
