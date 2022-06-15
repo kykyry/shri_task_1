@@ -2,7 +2,7 @@ let columnCount = 3;
 let elementGap = 20;
 let elem = document.querySelector(".root");
 let dot_elem = document.querySelectorAll(".root .el");
-let a = (window.innerWidth - (columnCount - 1)*elementGap) / columnCount;
+let a = (window.innerWidth - (columnCount - 1)*elementGap) / (window.innerWidth*columnCount);
 let arr_col = []; //document.documentElement.clientWidth
 let min_index = 0;
 
