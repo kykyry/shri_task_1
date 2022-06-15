@@ -1,6 +1,6 @@
 let columnCount_1 = 3;
 let elementGap = 4;
-const elem = document.querySelector("root");
+const elem = document.querySelector(".root");
 
 elem.setAttribute('column-count', 3);
 elem.setAttribute('column-gap', '4px');
