@@ -2,7 +2,7 @@ let columnCount = 3;
 let elementGap = 20;
 let elem = document.querySelector(".root");
 let dot_elem = document.querySelectorAll(".root .el");
-let a = 100 / columnCount;
+let a = (documentElement.clientWidth - (columnCount - 1)*elementGap) / columnCount;
 let arr_col = [];
 let min_index = 0;
 
@@ -11,6 +11,7 @@ for (let i = 0; i < columnCount; i++) {
     let qwer = document.createElement('div');
     qwer.id = "a" + i;
     // qwer.style.cssText=`float: left; width: ${a}%`;
+    qwer.style.cssText=`display: flex; justify-content: space-between; width: ${a}%`;
     // qwer.style.cssText=`display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
     elem.prepend(qwer);
     arr_col.push(qwer);
@@ -30,9 +31,9 @@ for (let j = 0; j < dot_elem.length; j++) {
 
 document.querySelectorAll(".el").forEach(el => el.style.cssText = `margin-bottom: ${elementGap}px;`)
 
-for (i = 0; i < columnCount; i++) {
-    document.querySelector(`#a${i}`).style.cssText = `display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
-}
+// for (i = 0; i < columnCount; i++) {
+//     document.querySelector(`#a${i}`).style.cssText = `display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
+// }
 // arr_par.forEach(elem => {if (elem.offsetHeight){
 
 // }})
