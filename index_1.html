@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="root">
+        <div class="el">У каждого объявления есть свои стили</div>
+        <div class="el">Их не нужно менять</div>
+        <div class="el">Каждое объявление должно быть свободным по высоте</div>
+        <div class="el">А вот ширину нужно будет выставить</div>
+        <div class="el">Ширину элемента root, при необходимости вы можете определить, но в тестах она может быть разная
+        </div>
+    </div>
+    <script>
+        let columnCount_1 = 3;
+        let elementGap = 4;
+        const elem = document.querySelector("root");
+
+        elem.setAttribute('column-count', 3);
+        elem.setAttribute('column-gap', '4px');
+
+        // elem.style.columnCount = columnCount_1;
+        // elem.style.columnGap = `${elementGap} px`;
+    </script>
+</body>
+
+</html>
