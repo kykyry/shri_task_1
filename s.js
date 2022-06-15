@@ -1,11 +1,12 @@
 let columnCount = 3;
-// let elementGap = 20;
+let elementGap = 20;
 let elem = document.querySelector(".root");
 let dot_elem = document.querySelectorAll(".root .el");
 // let arr_dot = Array.from(dot_elem);
 let a = 100/columnCount;
 let arr_col = [];
 let min_index = 0;
+
 
 for(let i = 0; i< columnCount; i++){
     let qwer = document.createElement('div');
@@ -27,6 +28,8 @@ for (let j = 0; j<dot_elem.length; j++){
     }
     document.querySelector(`#${min_index}`).appendChild(dot_elem[j]);
 }
+
+document.querySelectorAll(".el").forEach(el => el.style.cssText=`margin-bottom: ${elementGap}px;`)
 // arr_par.forEach(elem => {if (elem.offsetHeight){
 
 // }})
