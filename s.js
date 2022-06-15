@@ -3,7 +3,6 @@ let columnCount = 3;
 let elem = document.querySelector(".root");
 let dot_elem = document.querySelectorAll(".root .el");
 let arr_dot = Array.from(dot_elem);
-//arr_dot.forEach(el => console.log(el.offsetHeight))
 
 
 let a = 100/columnCount;
@@ -12,11 +11,13 @@ let min_index = 0;
 let min_height = 0;
 for(let i = 0; i< columnCount; i++){
     let qwer = document.createElement('div');
-    qwer.id = i;
+    qwer.id = columnCount - i - 1;
     qwer.style.cssText=`float: left; width: ${a}%`;
     elem.prepend(qwer);
     arr_par.push(qwer);
 }
+arr_par.forEach(el => console.log(el.offsetHeight))
+
 // for (let j = 0; j<arr_dot.length; j++){
 
 //     if(min_height >= )
