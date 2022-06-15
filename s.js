@@ -2,7 +2,7 @@ let columnCount = 3;
 // let elementGap = 20;
 let elem = document.querySelector(".root");
 let dot_elem = document.querySelectorAll(".root .el");
-let arr_dot = Array.from(dot_elem);
+// let arr_dot = Array.from(dot_elem);
 let a = 100/columnCount;
 let arr_col = [];
 let min_index = 0;
@@ -17,7 +17,7 @@ for(let i = 0; i< columnCount; i++){
 console.log(arr_par)
 arr_col.forEach(el => console.log(el.offsetHeight))
 
-for (let j = 0; j<arr_dot.length; j++){
+for (let j = 0; j<dot_elem.length; j++){
     let min_height = 1000000;
     for(let i=arr_col.length - 1; i>= 0; i--){
         if(min_height > arr_col[i].offsetHeight){
@@ -25,7 +25,7 @@ for (let j = 0; j<arr_dot.length; j++){
             min_index = i;
         }
     }
-    document.querySelector(`#${min_index}`).append(arr_dot[j]);
+    document.querySelector(`#${min_index}`).appendChild(dot_elem[j]);
 }
 // arr_par.forEach(elem => {if (elem.offsetHeight){
 
