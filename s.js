@@ -15,7 +15,6 @@ for(let i = 0; i< columnCount; i++){
     elem.prepend(qwer);
     arr_col.push(qwer);
 }
-console.log(arr_par)
 arr_col.forEach(el => console.log(el.offsetHeight))
 
 for (let j = 0; j<dot_elem.length; j++){
