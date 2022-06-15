@@ -11,7 +11,7 @@ for (let i = 0; i < columnCount; i++) {
     let qwer = document.createElement('div');
     qwer.id = "a" + i;
     // qwer.style.cssText=`float: left; width: ${a}%`;
-    elem.style.cssText=`display: flex; justify-content: space-between;`;
+
     qwer.style.cssText=`width: ${a}%`;
     // qwer.style.cssText=`display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
     elem.prepend(qwer);
@@ -31,7 +31,7 @@ for (let j = 0; j < dot_elem.length; j++) {
 }
 
 document.querySelectorAll(".el").forEach(el => el.style.cssText = `margin-bottom: ${elementGap}px;`)
-
+elem.style.cssText=`display: flex; justify-content: space-between;`;
 // for (i = 0; i < columnCount; i++) {
 //     document.querySelector(`#a${i}`).style.cssText = `display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
 // }
