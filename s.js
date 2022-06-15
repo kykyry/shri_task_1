@@ -2,26 +2,25 @@ let columnCount = 3;
 let elementGap = 20;
 let elem = document.querySelector(".root");
 let dot_elem = document.querySelectorAll(".root .el");
-// let arr_dot = Array.from(dot_elem);
-let a = 100/columnCount;
+let a = 100 / columnCount;
 let arr_col = [];
 let min_index = 0;
 
 
-for(let i = 0; i< columnCount; i++){
+for (let i = 0; i < columnCount; i++) {
     let qwer = document.createElement('div');
-    qwer.id = "a"+i;
+    qwer.id = "a" + i;
     // qwer.style.cssText=`float: left; width: ${a}%`;
-    qwer.style.cssText=`display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
+    // qwer.style.cssText=`display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
     elem.prepend(qwer);
     arr_col.push(qwer);
 }
 arr_col.forEach(el => console.log(el.offsetHeight))
 
-for (let j = 0; j<dot_elem.length; j++){
+for (let j = 0; j < dot_elem.length; j++) {
     let min_height = 1000000;
-    for(let i=arr_col.length - 1; i>= 0; i--){
-        if(min_height > arr_col[i].offsetHeight){
+    for (let i = arr_col.length - 1; i >= 0; i--) {
+        if (min_height > arr_col[i].offsetHeight) {
             min_height = arr_col[i].offsetHeight;
             min_index = i;
         }
@@ -29,7 +28,11 @@ for (let j = 0; j<dot_elem.length; j++){
     document.querySelector(`#a${min_index}`).appendChild(dot_elem[j]);
 }
 
-document.querySelectorAll(".el").forEach(el => el.style.cssText=`margin-bottom: ${elementGap}px;`)
+document.querySelectorAll(".el").forEach(el => el.style.cssText = `margin-bottom: ${elementGap}px;`)
+
+for (i = 0; i < columnCount; i++) {
+    document.querySelector(`#a${i}`).style.cssText = `display: grid; grid-template-columns: repeat(${columnCount}, 1fr); grid-gap: ${elementGap}px;`;
+}
 // arr_par.forEach(elem => {if (elem.offsetHeight){
 
 // }})
